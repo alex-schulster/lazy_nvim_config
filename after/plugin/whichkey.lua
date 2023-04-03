@@ -75,7 +75,7 @@ require("which-key") .register({
     ["<leader>lN"] = {"ﬂ Previous diagnostic"},
 
     -- Vertical and horizontal splits
-    ["<leader>\\"] = {"vsplit", "| Vertical split"},
-    ["<leader>-"] = {"split", "- horizontal split"},
+    ["<leader>\\"] = {"<cmd>vsplit<cr>", "| Vertical split"},
+    ["<leader>-"] = {"<cmd>split<cr>", "- horizontal split"},
 })
 
