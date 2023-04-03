@@ -17,3 +17,4 @@ require("telescope").setup {
 
 -- Needed for the extension to work
 require("telescope").load_extension("ui-select")
+

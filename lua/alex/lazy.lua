@@ -81,6 +81,15 @@ Plugins = {
 
     -- Telescope UI for other elements
     'nvim-telescope/telescope-ui-select.nvim',
+
+    -- FZF for nice picker
+    {
+        "junegunn/fzf",
+        run = function()
+            vim.fn["fzf#install"]()
+        end
+    },
+    'junegunn/fzf.vim',
 }
 
 -- Call lazy
