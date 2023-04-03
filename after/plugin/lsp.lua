@@ -27,6 +27,7 @@ vim.keymap.set("n", "<leader>lm", vim.cmd.Mason)
 
 -- Set up auto completion plugin
 local cmp = require('cmp')
+
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
@@ -34,12 +35,17 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<CR>'] = cmp.mapping.confirm({ select = true }),
   ["<C-Space>"] = cmp.mapping.complete(),
 })
+
 cmp.setup({
     snippet = {
         expand = function(args)
             luasnip.lsp_expand(args.body)
         end
-    }
+    },
+    sources = {
+      { name = 'luasnip' },
+      -- more sources
+    },
 })
 
 -- Set key bindings

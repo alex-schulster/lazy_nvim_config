@@ -62,9 +62,11 @@ Plugins = {
             {'williamboman/mason-lspconfig.nvim'},
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},     -- Required
-            {'hrsh7th/cmp-nvim-lsp'}, -- Required
-            {'L3MON4D3/LuaSnip'},     -- Required
+            {'hrsh7th/nvim-cmp'},           -- Required
+            {'hrsh7th/cmp-nvim-lsp'},       -- Required
+            {'hrsh7th/cmp-path'},           -- Required
+            {'saadparwaiz1/cmp_luasnip'},   -- Required
+            {'L3MON4D3/LuaSnip'},           -- Required
         }
     },
 
