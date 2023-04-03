@@ -79,13 +79,6 @@ Plugins = {
 
     -- Telescope UI for other elements
     'nvim-telescope/telescope-ui-select.nvim',
-
-    -- Bufferline
-    {
-        'akinsho/bufferline.nvim',
-        version = "v3.*",
-        dependencies = 'nvim-tree/nvim-web-devicons'
-    }
 }
 
 -- Call lazy
