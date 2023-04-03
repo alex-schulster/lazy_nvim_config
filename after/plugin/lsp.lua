@@ -43,7 +43,9 @@ cmp.setup({
         end
     },
     sources = {
-      { name = 'luasnip' },
+        { name = "nvim_lsp" },  -- LSP
+        { name = 'luasnip' },   -- Snippets
+        { name = "path" },      -- Path
       -- more sources
     },
 })
