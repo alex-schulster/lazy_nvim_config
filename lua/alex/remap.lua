@@ -29,3 +29,7 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]]) -- Delete in void register
 -- Make current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+-- Buffer control
+vim.keymap.set("n", "L", "<cmd>bnext<CR>") -- next buffer
+vim.keymap.set("n", "H", "<cmd>bprevious<CR>") -- previous buffer
+vim.keymap.set("n", "<C-w>", "<cmd>bd<CR>") -- close buffer (fail if unsaved)
