@@ -96,5 +96,8 @@ require("which-key") .register({
         require("todo-comments").jump_prev()
     end, "ﬂ  Previous diagnostic"},
     ["<leader>kf"] = {"<cmd>TodoTelescope keywords=TODO,FIX,BUG,WARN,WARNING,FIXME,INFO,NOTE,TEST<cr>", "ﬂ  Previous diagnostic"},
+
+    -- Add shortcut for indenting the whole buffer in one go
+    ["<leader>="] = {"ggVG=", "  Buffer indent"},
 })
 

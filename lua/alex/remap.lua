@@ -30,8 +30,10 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]]) -- Delete in void register
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Navigate between splits
-vim.keymap.set("n", "<C-h>", "<C-w>h");
-vim.keymap.set("n", "<C-j>", "<C-w>j");
-vim.keymap.set("n", "<C-k>", "<C-w>k");
-vim.keymap.set("n", "<C-l>", "<C-w>l");
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
 
+-- Ctrl-a for whole buffer selection
+vim.keymap.set("n", "<C-a>", "ggVG")
