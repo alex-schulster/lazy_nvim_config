@@ -79,9 +79,6 @@ Plugins = {
     -- Startup screen
     'goolord/alpha-nvim',
 
-    -- Telescope UI for other elements
-    'nvim-telescope/telescope-ui-select.nvim',
-
     -- FZF for nice picker
     {
         "junegunn/fzf",
@@ -93,6 +90,9 @@ Plugins = {
 
     -- Lualine for status bar
     'nvim-lualine/lualine.nvim',
+
+    -- Sneak for quick navigation with s
+    'justinmk/vim-sneak',
 }
 
 -- Call lazy
