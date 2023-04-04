@@ -90,6 +90,9 @@ Plugins = {
         end
     },
     'junegunn/fzf.vim',
+
+    -- Lualine for status bar
+    'nvim-lualine/lualine.nvim',
 }
 
 -- Call lazy
