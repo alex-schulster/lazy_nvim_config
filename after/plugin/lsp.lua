@@ -11,17 +11,6 @@ local luasnip = require('luasnip')
 -- Load recommended presets
 lsp.preset("recommended")
 
--- Fix Undefined global 'vim'
-lsp.configure('lua-language-server', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-})
-
 -- Remap key to launch Mason GUI
 vim.keymap.set("n", "<leader>lm", vim.cmd.Mason)
 
@@ -81,7 +70,7 @@ lsp.on_attach(function(_, bufnr)
 end)
 
 -- (Optional) Configure lua language server for neovim
--- require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
 
