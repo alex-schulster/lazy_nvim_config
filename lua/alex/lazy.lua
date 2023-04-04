@@ -96,6 +96,9 @@ Plugins = {
 
     -- Identation guidelines
     "lukas-reineke/indent-blankline.nvim",
+
+    -- Autopairs
+    "windwp/nvim-autopairs",
 }
 
 -- Call lazy
