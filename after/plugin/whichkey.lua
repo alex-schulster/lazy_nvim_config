@@ -82,6 +82,9 @@ require("which-key") .register({
     ["<leader>n"] = {function ()
         vim.opt.nu = true
         vim.opt.relativenumber = true
-    end, " Set numbering"}
+    end, " Set numbering"},
+
+    -- Open nnn file explorer
+    ["<leader>e"] = {"<cmd>Ex<cr>", "פּ File explorer"},
 })
 

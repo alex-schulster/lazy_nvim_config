@@ -99,6 +99,9 @@ Plugins = {
 
     -- Autopairs
     "windwp/nvim-autopairs",
+
+    -- Vinegar for improved netrw
+    'tpope/vim-vinegar',
 }
 
 -- Call lazy
