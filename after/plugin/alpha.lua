@@ -69,13 +69,13 @@ dashboard.section.buttons.val = {
 }
 
 -- Define footer
-local handle = io.popen('fortune')
-if handle ~= nil then
-    local fortune = handle:read("*a")
-    handle:close()
-    dashboard.section.footer.val = fortune
-    dashboard.config.opts.noautocmd = true
-end
+-- local handle = io.popen('fortune')
+-- if handle ~= nil then
+--     local fortune = handle:read("*a")
+--     handle:close()
+--     dashboard.section.footer.val = fortune
+--     dashboard.config.opts.noautocmd = true
+-- end
 
 -- Apply all settings
 alpha.setup(dashboard.config)
