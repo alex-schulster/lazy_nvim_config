@@ -86,5 +86,15 @@ require("which-key") .register({
 
     -- Open nnn file explorer
     ["<leader>e"] = {"<cmd>Ex<cr>", "פּ File explorer"},
+
+    -- Todos rempas
+    ["<leader>k"] = {name = "ﱔ Todo list"},
+    ["<leader>kn"] = {function()
+        require("todo-comments").jump_next()
+    end, "ﬃ  Next diagnostic"},
+    ["<leader>kN"] = {function()
+        require("todo-comments").jump_prev()
+    end, "ﬂ  Previous diagnostic"},
+    ["<leader>kf"] = {"<cmd>TodoTelescope keywords=TODO,FIX,BUG,WARN,WARNING,FIXME,INFO,NOTE,TEST<cr>", "ﬂ  Previous diagnostic"},
 })
 

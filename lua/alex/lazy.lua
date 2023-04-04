@@ -111,6 +111,13 @@ Plugins = {
 
     -- For smarter commenting
     'JoosepAlviste/nvim-ts-context-commentstring',
+
+    {
+        "folke/todo-comments.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+    }
 }
 
 -- Call lazy
