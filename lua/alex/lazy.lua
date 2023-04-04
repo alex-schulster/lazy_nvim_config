@@ -105,6 +105,12 @@ Plugins = {
 
     -- Nvim Lua API documentation
     'folke/neodev.nvim',
+
+    -- gcc for commenting
+    'tpope/vim-commentary',
+
+    -- For smarter commenting
+    'JoosepAlviste/nvim-ts-context-commentstring',
 }
 
 -- Call lazy
