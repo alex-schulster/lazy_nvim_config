@@ -77,5 +77,11 @@ require("which-key") .register({
     -- Vertical and horizontal splits
     ["<leader>\\"] = {"<cmd>vsplit<cr>", "| Vertical split"},
     ["<leader>-"] = {"<cmd>split<cr>", "- horizontal split"},
+
+    -- Set back line numbering in case of bug
+    ["<leader>n"] = {function ()
+        vim.opt.nu = true
+        vim.opt.relativenumber = true
+    end, " Set numbering"}
 })
 
