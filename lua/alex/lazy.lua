@@ -93,6 +93,9 @@ Plugins = {
 
     -- Sneak for quick navigation with s
     'justinmk/vim-sneak',
+
+    -- Identation guidelines
+    "lukas-reineke/indent-blankline.nvim",
 }
 
 -- Call lazy
