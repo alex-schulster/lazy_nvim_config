@@ -102,6 +102,9 @@ Plugins = {
 
     -- Vinegar for improved netrw
     'tpope/vim-vinegar',
+
+    -- Nvim Lua API documentation
+    'folke/neodev.nvim',
 }
 
 -- Call lazy

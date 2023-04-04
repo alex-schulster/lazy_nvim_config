@@ -50,3 +50,4 @@ vim.opt.colorcolumn = "85"
 vim.g.netrw_banner = 1
 vim.g.netrw_liststyle = 3
 vim.g.netrw_winsize = '30'
+
