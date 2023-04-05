@@ -32,7 +32,7 @@ require("which-key").setup({
     show_help = false,
 
     -- Don't display non named bindings
-    ignore_missing = false
+    ignore_missing = true
 })
 
 -- Set keymaps
@@ -68,7 +68,7 @@ require("which-key") .register({
     ["<leader>al"] = {"File 4"},
 
     -- LSP
-    ["<leader>l"] = {name = " 力LSP"},
+    ["<leader>l"] = {name = "力LSP"},
     ["<leader>lm"] = {" Mason"},
     ["<leader>la"] = {" Code actions"},
     ["<leader>lr"] = {"﬍ Rename"},
