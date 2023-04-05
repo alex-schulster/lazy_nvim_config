@@ -25,7 +25,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]])       -- Paste without yanking deleti
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]]) -- Yank in systemp clipboard
 vim.keymap.set("n", "<leader>Y", [["+Y]])        -- Same
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]]) -- Delete in void register
-
 -- Make current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
@@ -37,3 +36,8 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 -- Ctrl-a for whole buffer selection
 vim.keymap.set("n", "<C-a>", "ggVG")
+vim.keymap.set("n", "<leader>=", function ()
+    local r, _ = unpack(vim.api.nvim_win_get_cursor(0))
+    vim.api.nvim_feedkeys(string.format("ggVG=%sgg", r), 'n', true)
+end)
+
