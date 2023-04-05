@@ -48,7 +48,7 @@ require("todo-comments").setup({
     -- list of highlight groups or use the hex color if hl not found as a fallback
     colors = {
         error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
-        warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
+        warning = { "DiagnosticWarn", "WarningMsg", "#FBBF25" },
         info = { "DiagnosticInfo", "#2563EB" },
         hint = { "DiagnosticHint", "#10B981" },
         default = { "Identifier", "#7C3AED" },

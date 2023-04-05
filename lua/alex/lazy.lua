@@ -117,7 +117,10 @@ Plugins = {
         dependencies = {
             "nvim-lua/plenary.nvim",
         },
-    }
+    },
+
+    -- Illuminate the word under the curser and its references
+    'RRethy/vim-illuminate',
 }
 
 -- Call lazy
