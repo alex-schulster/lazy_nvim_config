@@ -70,6 +70,9 @@ Plugins = {
         }
     },
 
+    -- Function signatures
+    "ray-x/lsp_signature.nvim",
+
     -- Collection of snippets
     'rafamadriz/friendly-snippets',
 
