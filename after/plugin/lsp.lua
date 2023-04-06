@@ -87,7 +87,7 @@ lsp.on_attach(function(client, bufnr)
     -- Set remaps
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "gh", function() vim.lsp.buf.hover() end, opts)
-    vim.keymap.set("n", "<leader>la", function() vim.lsp.buf.code_action() end, opts)
+    vim.keymap.set("n", "<leader>la", "<cmd>CodeActionMenu<cr>", opts)
     vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.references() end, opts)
     vim.keymap.set("n", "<leader>lr", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("n", "<leader>ln", function() vim.diagnostic.goto_next() end, opts)

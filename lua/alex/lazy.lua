@@ -83,6 +83,9 @@ Plugins = {
         }
     },
 
+    -- Floating code action window
+    'weilbith/nvim-code-action-menu',
+
     -- Collection of snippets
     'rafamadriz/friendly-snippets',
 
