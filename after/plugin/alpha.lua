@@ -35,6 +35,7 @@ dashboard.section.buttons.val = {
     dashboard.button( "f", "  Find file" , "<cmd>Telescope find_files<cr>"),
     dashboard.button( "t", "﬍  Find text" , "<cmd>Telescope live_grep<cr>"),
     dashboard.button( "r", "  Recent files" , "<cmd>Telescope oldfiles<cr>"),
+    dashboard.button( "g", "  Lazy Git" , "<cmd>LazyGit<cr>"),
     dashboard.button( "q", "  Quit NVIM" , ":qa<CR>"),
 }
 
