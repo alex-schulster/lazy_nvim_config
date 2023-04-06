@@ -28,6 +28,7 @@ require("neodev").setup({
 -- Start LSP
 local lsp = require('lsp-zero')
 local luasnip = require('luasnip')
+local navbuddy = require("nvim-navbuddy")
 
 -- Load recommended presets
 lsp.preset("recommended")
@@ -77,8 +78,11 @@ lsp.set_preferences({
 })
 
 -- Define function that will be executed when attaching an LSP to a buffer
-lsp.on_attach(function(_, bufnr)
+lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
+
+    -- Attach breadcrumbs
+    navbuddy.attach(client, bufnr)
 
     -- Set remaps
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)

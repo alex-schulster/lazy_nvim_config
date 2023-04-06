@@ -76,6 +76,7 @@ require("which-key") .register({
     ["<leader>ll"] = {"<cmd>Lazy<cr>", "鈴Lazy menu"},
     ["<leader>ln"] = {"ﬃ Next diagnostic"},
     ["<leader>lN"] = {"ﬂ Previous diagnostic"},
+    ["<leader>lb"] = {"פּ Breadcrumbs"},
 
     -- Vertical and horizontal splits
     ["<leader>\\"] = {"<cmd>vsplit<cr>", "| Vertical split"},

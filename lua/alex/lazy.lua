@@ -73,6 +73,16 @@ Plugins = {
     -- Function signatures
     "ray-x/lsp_signature.nvim",
 
+    -- Floating file structure
+    {
+        "SmiteshP/nvim-navbuddy",
+        dependencies = {
+            "neovim/nvim-lspconfig",
+            "SmiteshP/nvim-navic",
+            "MunifTanjim/nui.nvim"
+        }
+    },
+
     -- Collection of snippets
     'rafamadriz/friendly-snippets',
 
