@@ -83,8 +83,8 @@ Plugins = {
         }
     },
 
-    -- Floating code action window
-    'weilbith/nvim-code-action-menu',
+    -- LSP UI for code actions and rename
+    "jinzhongjia/LspUI.nvim",
 
     -- Collection of snippets
     'rafamadriz/friendly-snippets',
