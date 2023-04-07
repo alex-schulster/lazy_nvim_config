@@ -50,7 +50,8 @@ require("which-key") .register({
     ["<leader>y"] = {[["+y]], " Yank in system clipboard"},
     ["<leader>d"] = {[["_d]], " Delete in void register"},
 
-    -- Lazy menu
+    -- Close current window
+    ["<leader>c"] = {"<C-w>c", " Delete in void register"},
 
     -- Make current file executable
     ["<leader>x"] = {"<cmd>!chmod +x %<CR>", " File chmod +x"},
