@@ -78,6 +78,7 @@ require("which-key") .register({
     ["<leader>ln"] = {"ﬃ Next diagnostic"},
     ["<leader>lN"] = {"ﬂ Previous diagnostic"},
     ["<leader>lb"] = {"<cmd>Navbuddy<cr>", "פּ Nav Buddy"},
+    ["<leader>lB"] = {"﬙ STM32 LSP patch"},
 
     -- Vertical and horizontal splits
     ["<leader>\\"] = {"<cmd>vsplit<cr>", "| Vertical split"},

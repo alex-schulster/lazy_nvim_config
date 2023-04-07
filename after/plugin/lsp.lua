@@ -77,6 +77,20 @@ lsp.set_preferences({
     }
 })
 
+-- Create compile_commands.json generator function
+local function compile_commands()
+    -- Create command string
+    local command = string.format("compile_command_generator > /dev/null 2>&1")
+    -- Execute command
+    local exit_status = os.execute(command)
+    -- Check exit status. If failed, raise an exception
+    if exit_status ~= 0 then
+        error("Not in a STM project directory")
+    else
+        vim.api.nvim_command("LspRestart")
+    end
+end
+
 -- Define function that will be executed when attaching an LSP to a buffer
 lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
@@ -92,6 +106,7 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>lr", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("n", "<leader>ln", function() vim.diagnostic.goto_next() end, opts)
     vim.keymap.set("n", "<leader>lN", function() vim.diagnostic.goto_prev() end, opts)
+    vim.keymap.set("n", "<leader>lB", function () compile_commands() end, opts)
 end)
 
 -- (Optional) Configure lua language server for neovim
