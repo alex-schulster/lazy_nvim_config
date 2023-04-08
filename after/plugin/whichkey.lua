@@ -37,14 +37,6 @@ require("which-key").setup({
 
 -- Set keymaps
 require("which-key").register({
-    -- Telescope
-    ["<leader>f"] = {name = " Find"},
-    ["<leader>ff"] = {"<cmd>Telescope find_files<cr>", " File"},
-    ["<leader>ft"] = {"<cmd>Telescope live_grep<cr>", " Text in workspace"},
-    ["<leader>fw"] = {"<cmd>Telescope grep_string<cr>", "󰟵 Selection / Word under cursor"},
-    ["<leader>fb"] = {"<cmd>Telescope buffers<cr>", "﬘ Buffers"},
-    ["<leader>fh"] = {"<cmd>Telescope current_buffer_fuzzy_find<cr>", "什Text in this buffer"},
-
     -- Quick actions
     ["<leader>p"] = {[["_dP]], "屢Paste without yank"},
     ["<leader>y"] = {[["+y]], " Yank in system clipboard"},
@@ -55,30 +47,6 @@ require("which-key").register({
 
     -- Make current file executable
     ["<leader>x"] = {"<cmd>!chmod +x %<CR>", "󱨗 File chmod +x"},
-
-    -- Lazy git
-    ["<leader>g"] = {"<cmd>LazyGit<CR>", " LazyGit"},
-
-    -- Harpoon
-    ["<leader>a"] = {name = "󱡁 Harpoon"},
-    ["<leader>aa"] = {" Add this file"},
-    ["<leader>am"] = {" Menu"},
-    ["<leader>ah"] = {"File 1"},
-    ["<leader>aj"] = {"File 2"},
-    ["<leader>ak"] = {"File 3"},
-    ["<leader>al"] = {"File 4"},
-
-    -- LSP
-    ["<leader>l"] = {name = "力LSP"},
-    ["<leader>lm"] = {" Mason"},
-    ["<leader>la"] = {" Code actions"},
-    ["<leader>lr"] = {"﬍ Rename"},
-    ["<leader>lf"] = {" Mason"},
-    ["<leader>ll"] = {"<cmd>Lazy<cr>", "鈴Lazy menu"},
-    ["<leader>ln"] = {"ﬃ Next diagnostic"},
-    ["<leader>lN"] = {"ﬂ Previous diagnostic"},
-    ["<leader>lb"] = {"<cmd>Navbuddy<cr>", "פּ Nav Buddy"},
-    ["<leader>lB"] = {"﬙ STM32 LSP patch"},
 
     -- Vertical and horizontal splits
     ["<leader>\\"] = {"<cmd>vsplit<cr>", " Vertical split"},
@@ -92,12 +60,6 @@ require("which-key").register({
 
     -- Open nnn file explorer
     ["<leader>e"] = {"<cmd>Ex<cr>", "פּ File explorer"},
-
-    -- Todos rempas
-    ["<leader>k"] = {name = "ﱔ Todo list"},
-    ["<leader>kn"] = {function() require("todo-comments").jump_next() end, "ﬃ  Next diagnostic"},
-    ["<leader>kN"] = {function() require("todo-comments").jump_prev() end, "ﬂ  Previous diagnostic"},
-    ["<leader>kf"] = {"<cmd>TodoTelescope keywords=TODO,FIX,BUG,WARN,WARNING,FIXME,INFO,NOTE,TEST<cr>", "󰍉 Find diagnostic"},
 
     -- Add shortcut for indenting the whole buffer in one go
     ["<leader>="] = {"ggVG=", "  Buffer indent"},

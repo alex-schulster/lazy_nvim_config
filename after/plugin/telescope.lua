@@ -21,3 +21,14 @@ require("telescope").setup({
     },
 })
 
+-- Set keymaps
+require("which-key").register({
+    -- Telescope
+    ["<leader>f"] = {name = " Find"},
+    ["<leader>ff"] = {"<cmd>Telescope find_files<cr>", " File"},
+    ["<leader>ft"] = {"<cmd>Telescope live_grep<cr>", " Text in workspace"},
+    ["<leader>fw"] = {"<cmd>Telescope grep_string<cr>", "󰟵 Selection / Word under cursor"},
+    ["<leader>fb"] = {"<cmd>Telescope buffers<cr>", "﬘ Buffers"},
+    ["<leader>fh"] = {"<cmd>Telescope current_buffer_fuzzy_find<cr>", "什Text in this buffer"},
+
+})

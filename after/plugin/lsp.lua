@@ -101,12 +101,20 @@ lsp.on_attach(function(client, bufnr)
     -- Set remaps
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "gh", function() vim.lsp.buf.hover() end, opts)
-    vim.keymap.set("n", "<leader>la", function() vim.lsp.buf.code_action() end, opts)
-    vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.references() end, opts)
-    vim.keymap.set("n", "<leader>lr", function() vim.lsp.buf.rename() end, opts)
-    vim.keymap.set("n", "<leader>ln", function() vim.diagnostic.goto_next() end, opts)
-    vim.keymap.set("n", "<leader>lN", function() vim.diagnostic.goto_prev() end, opts)
-    vim.keymap.set("n", "<leader>lB", function () compile_commands() end, opts)
+    -- Which-key bindings
+    require("which-key").register({
+        ["<leader>l"] = {name = "力LSP"},
+        ["<leader>lm"] = {" Mason"},
+        ["<leader>la"] = {function() vim.lsp.buf.code_action() end, " Code actions"},
+        ["<leader>lr"] = {function() vim.lsp.buf.rename() end, "﬍ Rename"},
+        ["<leader>lf"] = {function() vim.lsp.buf.references() end, " Find references"},
+        ["<leader>ll"] = {"<cmd>Lazy<cr>", "鈴Lazy menu"},
+        ["<leader>ln"] = {function() vim.diagnostic.goto_next() end, "ﬃ Next diagnostic"},
+        ["<leader>lN"] = {function() vim.diagnostic.goto_prev() end, "ﬂ Previous diagnostic"},
+        ["<leader>lb"] = {"<cmd>Navbuddy<cr>", "פּ Nav Buddy"},
+        ["<leader>lB"] = {function () compile_commands() end, "﬙ STM32 LSP patch"},
+    })
+
 end)
 
 -- (Optional) Configure lua language server for neovim
