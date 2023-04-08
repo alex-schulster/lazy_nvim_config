@@ -110,6 +110,13 @@ Plugins = {
     -- Lualine for status bar
     'nvim-lualine/lualine.nvim',
 
+    --
+    {
+        'linrongbin16/lsp-progress.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+    },
+
+
     -- Sneak for quick navigation with s
     'justinmk/vim-sneak',
 
