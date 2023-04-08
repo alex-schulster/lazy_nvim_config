@@ -159,6 +159,9 @@ Plugins = {
             })
         end
     },
+
+    -- Seamless navigation between vim and tmux panes
+    'christoomey/vim-tmux-navigator',
 }
 
 -- Call lazy
