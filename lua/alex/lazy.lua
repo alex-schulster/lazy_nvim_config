@@ -27,12 +27,21 @@ Plugins = {
     -- Telescope
     {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.1',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
 
     -- Tokyonight theme
-    'folke/tokyonight.nvim',
+    {
+        'folke/tokyonight.nvim',
+        config = function()
+            require("tokyonight").setup({
+                style = "moon",	-- Set style among the 4 available
+                -- transparent = true,	-- Set transparent background
+            })
+            -- Apply Tokyonight color scheme
+            vim.cmd[[colorscheme tokyonight]]
+        end
+    },
 
     -- Treesitter
     {
@@ -58,97 +67,97 @@ Plugins = {
             {                                      -- Mason
             'williamboman/mason.nvim',
             build = vim.cmd.MasonUpdate
-            },
-            {'williamboman/mason-lspconfig.nvim'},
-
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},           -- Required
-            {'hrsh7th/cmp-nvim-lsp'},       -- Required
-            {'hrsh7th/cmp-path'},           -- Required
-            {'saadparwaiz1/cmp_luasnip'},   -- Required
-            {'L3MON4D3/LuaSnip'},           -- Required
-        }
-    },
-
-    -- Function signatures
-    "ray-x/lsp_signature.nvim",
-
-    -- Floating file structure
-    {
-        "SmiteshP/nvim-navbuddy",
-        dependencies = {
-            "neovim/nvim-lspconfig",
-            "SmiteshP/nvim-navic",
-            "MunifTanjim/nui.nvim"
-        }
-    },
-
-    -- LSP UI for code actions and rename
-    "jinzhongjia/LspUI.nvim",
-
-    -- Collection of snippets
-    'rafamadriz/friendly-snippets',
-
-    -- Which key
-    "folke/which-key.nvim",
-
-    -- Startup screen
-    'goolord/alpha-nvim',
-
-    -- FZF for nice picker
-    {
-        "junegunn/fzf",
-        run = function()
-            vim.fn["fzf#install"]()
-        end
-    },
-    'junegunn/fzf.vim',
-
-    -- Lualine for status bar
-    'nvim-lualine/lualine.nvim',
-
-    -- Sneak for quick navigation with s
-    'justinmk/vim-sneak',
-
-    -- Identation guidelines
-    "lukas-reineke/indent-blankline.nvim",
-
-    -- Autopairs
-    "windwp/nvim-autopairs",
-
-    -- Vinegar for improved netrw
-    'tpope/vim-vinegar',
-
-    -- Nvim Lua API documentation
-    'folke/neodev.nvim',
-
-    -- gcc for commenting
-    'tpope/vim-commentary',
-
-    -- For smarter commenting
-    'JoosepAlviste/nvim-ts-context-commentstring',
-
-    {
-        "folke/todo-comments.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
         },
-    },
+        {'williamboman/mason-lspconfig.nvim'},
 
-    -- Illuminate the word under the curser and its references
-    'RRethy/vim-illuminate',
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},           -- Required
+        {'hrsh7th/cmp-nvim-lsp'},       -- Required
+        {'hrsh7th/cmp-path'},           -- Required
+        {'saadparwaiz1/cmp_luasnip'},   -- Required
+        {'L3MON4D3/LuaSnip'},           -- Required
+    }
+},
 
-    -- Surround feature
-    {
-        "kylechui/nvim-surround",
-        version = "*", -- Use for stability; omit to use `main` branch for the latest features
-        event = "VeryLazy",
-        config = function()
-            require("nvim-surround").setup({
-                -- Configuration here, or leave empty to use defaults
-            })
-        end
+-- Function signatures
+"ray-x/lsp_signature.nvim",
+
+-- Floating file structure
+{
+    "SmiteshP/nvim-navbuddy",
+    dependencies = {
+        "neovim/nvim-lspconfig",
+        "SmiteshP/nvim-navic",
+        "MunifTanjim/nui.nvim"
+    }
+},
+
+-- LSP UI for code actions and rename
+"jinzhongjia/LspUI.nvim",
+
+-- Collection of snippets
+'rafamadriz/friendly-snippets',
+
+-- Which key
+"folke/which-key.nvim",
+
+-- Startup screen
+'goolord/alpha-nvim',
+
+-- FZF for nice picker
+{
+    "junegunn/fzf",
+    run = function()
+        vim.fn["fzf#install"]()
+    end
+},
+'junegunn/fzf.vim',
+
+-- Lualine for status bar
+'nvim-lualine/lualine.nvim',
+
+-- Sneak for quick navigation with s
+'justinmk/vim-sneak',
+
+-- Identation guidelines
+"lukas-reineke/indent-blankline.nvim",
+
+-- Autopairs
+"windwp/nvim-autopairs",
+
+-- Vinegar for improved netrw
+'tpope/vim-vinegar',
+
+-- Nvim Lua API documentation
+'folke/neodev.nvim',
+
+-- gcc for commenting
+'tpope/vim-commentary',
+
+-- For smarter commenting
+'JoosepAlviste/nvim-ts-context-commentstring',
+
+{
+    "folke/todo-comments.nvim",
+    dependencies = {
+        "nvim-lua/plenary.nvim",
     },
+},
+
+-- Illuminate the word under the curser and its references
+'RRethy/vim-illuminate',
+
+-- Surround feature
+{
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+},
 }
 
 -- Call lazy
