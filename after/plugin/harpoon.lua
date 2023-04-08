@@ -18,5 +18,5 @@ require("which-key").register({
     ["<leader>aj"] = {function() ui.nav_file(2) end, "File 2"},
     ["<leader>ak"] = {function() ui.nav_file(3) end, "File 3"},
     ["<leader>al"] = {function() ui.nav_file(4) end, "File 4"},
-
 })
+
