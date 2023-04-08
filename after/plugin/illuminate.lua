@@ -14,9 +14,5 @@ illuminate.configure({
 })
 
 -- Define remaps
-vim.keymap.set("n", "m", function ()
-    illuminate.goto_next_reference()
-end)
-vim.keymap.set("n", "M", function ()
-    illuminate.goto_prev_reference()
-end)
+vim.keymap.set("n", "m", function () illuminate.goto_next_reference() end)
+vim.keymap.set("n", "M", function () illuminate.goto_prev_reference() end)
