@@ -58,7 +58,7 @@ require("which-key").register({
         vim.opt.relativenumber = true
     end, " Set numbering"},
 
-    -- Open nnn file explorer
+    -- Open file explorer
     ["<leader>e"] = {"<cmd>Ex<cr>", "פּ File explorer"},
 
     -- Add shortcut for indenting the whole buffer in one go
