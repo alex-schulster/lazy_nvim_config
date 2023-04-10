@@ -162,6 +162,12 @@ Plugins = {
 
     -- Seamless navigation between vim and tmux panes
     'christoomey/vim-tmux-navigator',
+
+    -- STM LSP local plugin
+    {
+        dir = "~/local/code/Lua/stm_lsp_nvim/",
+        name = "stm_lsp_nvim"
+    }
 }
 
 -- Call lazy
