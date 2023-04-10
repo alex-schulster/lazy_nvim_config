@@ -63,5 +63,20 @@ require("which-key").register({
 
     -- Add shortcut for indenting the whole buffer in one go
     ["<leader>="] = {"ggVG=", "  Buffer indent"},
+
+    -- Shortcut for alpha menu
+    ["<leader>m"] = {function ()
+        -- Get the number of opened windows
+        local num_splits = #vim.api.nvim_tabpage_list_wins(0)
+
+        -- Close all of them except the last one
+        for i = 1,num_splits-1 do
+            print("Closing " .. i)
+            vim.cmd("close")
+        end
+
+        -- On the last window, call the alpha menu
+        vim.cmd("Alpha")
+    end, "󰻀 Alpha menu"},
 })
 
