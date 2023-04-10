@@ -4,4 +4,4 @@
 ################################################################################
 --]]
 
-local stm_lsp = require("stm_lsp_nvim")
+require("stm_lsp_nvim").setup()
