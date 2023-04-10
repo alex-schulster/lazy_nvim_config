@@ -63,9 +63,6 @@ lsp.on_attach(function(client, bufnr)
         ["<leader>ln"] = {function() vim.diagnostic.goto_next() end, "ﬃ Next diagnostic"},
         ["<leader>lN"] = {function() vim.diagnostic.goto_prev() end, "ﬂ Previous diagnostic"},
         ["<leader>lb"] = {"<cmd>Navbuddy<cr>", "פּ Nav Buddy"},
-        ["<leader>lB"] = {function ()
-            require("compile_commands").compile_commands()
-        end, "﬙ STM32 LSP patch"},
     })
 end)
 

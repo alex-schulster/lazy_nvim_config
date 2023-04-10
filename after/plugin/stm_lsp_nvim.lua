@@ -5,3 +5,7 @@
 --]]
 
 require("stm_lsp_nvim").setup()
+
+require("which-key").register({
+    ["<leader>lB"] = {vim.cmd.StmLspPatch, "﬙ STM32 LSP patch"},
+})
