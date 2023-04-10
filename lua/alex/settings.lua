@@ -51,3 +51,5 @@ vim.g.netrw_banner = 1
 vim.g.netrw_liststyle = 3
 vim.g.netrw_winsize = '30'
 
+-- Disable nvim modelines
+vim.opt.modeline = false
