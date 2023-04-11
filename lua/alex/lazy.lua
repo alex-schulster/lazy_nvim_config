@@ -167,7 +167,13 @@ Plugins = {
     {
         dir = "~/local/code/Lua/stm_lsp_nvim/",
         name = "stm_lsp_nvim"
-    }
+    },
+
+    -- Markdown preview plugin
+    {
+        "iamcco/markdown-preview.nvim",
+        build = function() vim.fn["mkdp#util#install"]() end,
+    },
 }
 
 -- Call lazy
