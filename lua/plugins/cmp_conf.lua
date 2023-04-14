@@ -7,13 +7,7 @@
 local M = {}
 
 -- Load luasnip and 
-require("luasnip.loaders.from_vscode").load(
-{
-    paths = {
-        "../../snippets/"
-    }
-}
-)
+require("luasnip.loaders.from_vscode").load()
 
 -- Setup CMP plugin
 function M.setup()
