@@ -24,15 +24,10 @@ vim.opt.rtp:prepend(lazypath)
 
 -- [[ ####################### INSTALL PLUGINS HERE ####################### ]] --
 Plugins = {
-    -- Telescope
-    {
-        'nvim-telescope/telescope.nvim',
-        dependencies = { 'nvim-lua/plenary.nvim' }
-    },
-
     -- Tokyonight theme
     {
         'folke/tokyonight.nvim',
+        priority = 1000,
         config = function()
             require("tokyonight").setup({
                 style = "moon",	-- Set style among the 4 available
@@ -40,6 +35,17 @@ Plugins = {
             })
             -- Apply Tokyonight color scheme
             vim.cmd[[colorscheme tokyonight]]
+        end,
+    },
+
+    -- Telescope
+    {
+        lazy = true,
+        'nvim-telescope/telescope.nvim',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        cmd = {"Telescope"},
+        config = function ()
+            require("plugins.telescope")
         end
     },
 
