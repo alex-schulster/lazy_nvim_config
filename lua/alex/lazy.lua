@@ -51,10 +51,16 @@ Plugins = {
 
     -- Treesitter
     {
+        lazy = true,
         'nvim-treesitter/nvim-treesitter',
+        cmd = {"TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo", "TSUpdate"},
+        event = "BufEnter",
         build = function()
             vim.cmd("autocmd FileType * TSUpdate")
         end,
+        config = function ()
+            require("plugins.treesitter")
+        end
     },
 
     -- Harpoon
