@@ -127,6 +127,7 @@ Plugins = {
         lazy = true,
         "folke/which-key.nvim",
         keys = "<space>",
+        event = "VeryLazy",
         config = function ()
             require("plugins.whichkey")
         end
@@ -135,14 +136,14 @@ Plugins = {
     -- Startup screen
     'goolord/alpha-nvim',
 
-    -- FZF for nice picker
-    {
-        "junegunn/fzf",
-        run = function()
-            vim.fn["fzf#install"]()
-        end
-    },
-    'junegunn/fzf.vim',
+    -- -- FZF for nice picker
+    -- {
+    --     "junegunn/fzf",
+    --     run = function()
+    --         vim.fn["fzf#install"]()
+    --     end
+    -- },
+    -- 'junegunn/fzf.vim',
 
     -- Lualine for status bar
     'nvim-lualine/lualine.nvim',
