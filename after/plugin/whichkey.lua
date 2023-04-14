@@ -78,5 +78,8 @@ require("which-key").register({
         -- On the last window, call the alpha menu
         vim.cmd("Alpha")
     end, "󰻀 Alpha menu"},
+
+    -- Lazygit
+    ["<leader>g"] = {vim.cmd.LazyGit, " LazyGit"},
 })
 

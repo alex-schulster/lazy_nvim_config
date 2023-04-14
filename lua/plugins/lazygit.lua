@@ -4,7 +4,3 @@
 ################################################################################
 --]]
 
--- Set keybinding for lazygit
-require("which-key").register({
-    ["<leader>g"] = {vim.cmd.LazyGit, " LazyGit"},
-})
