@@ -99,6 +99,9 @@ Plugins = {
             {'hrsh7th/cmp-path'},           -- Required
             {'saadparwaiz1/cmp_luasnip'},   -- Required
             {'L3MON4D3/LuaSnip'},           -- Required
+
+            -- Lsp progress in status bar
+            {'linrongbin16/lsp-progress.nvim'},
         }
     },
 
@@ -136,22 +139,17 @@ Plugins = {
     -- Startup screen
     'goolord/alpha-nvim',
 
-    -- -- FZF for nice picker
-    -- {
-    --     "junegunn/fzf",
-    --     run = function()
-    --         vim.fn["fzf#install"]()
-    --     end
-    -- },
-    -- 'junegunn/fzf.vim',
-
     -- Lualine for status bar
     'nvim-lualine/lualine.nvim',
 
-    --
+    -- LSP loading progress bar
     {
+        lazy = true,
         'linrongbin16/lsp-progress.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function ()
+            require("plugins.lsp-progress")
+        end
     },
 
 
