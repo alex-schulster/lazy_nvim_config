@@ -64,7 +64,14 @@ Plugins = {
     },
 
     -- Harpoon
-    'ThePrimeagen/harpoon',
+    {
+        lazy = true,
+        'ThePrimeagen/harpoon',
+        event = "VeryLazy",
+        config = function ()
+            require("plugins.harpoon")
+        end
+    },
 
     -- Lazygit
     {
@@ -116,7 +123,14 @@ Plugins = {
     'rafamadriz/friendly-snippets',
 
     -- Which key
-    "folke/which-key.nvim",
+    {
+        lazy = true,
+        "folke/which-key.nvim",
+        keys = "<space>",
+        config = function ()
+            require("plugins.whichkey")
+        end
+    },
 
     -- Startup screen
     'goolord/alpha-nvim',
