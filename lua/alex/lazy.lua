@@ -67,7 +67,14 @@ Plugins = {
     'ThePrimeagen/harpoon',
 
     -- Lazygit
-    'kdheepak/lazygit.nvim',
+    {
+        lazy = true,
+        'kdheepak/lazygit.nvim',
+        cmd = "LazyGit",
+        config = function ()
+            require("plugins.lazygit")
+        end
+    },
 
     -- LSP
     {
