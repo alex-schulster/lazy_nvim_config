@@ -54,7 +54,7 @@ Plugins = {
         lazy = true,
         'nvim-treesitter/nvim-treesitter',
         cmd = {"TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo", "TSUpdate"},
-        event = "BufEnter",
+        event = "BufRead",
         build = function()
             vim.cmd("autocmd FileType * TSUpdate")
         end,
@@ -92,6 +92,7 @@ Plugins = {
 
     -- LSP
     {
+        lazy = true,
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
         dependencies = {
@@ -109,31 +110,33 @@ Plugins = {
 
             -- Lsp progress in status bar
             {'linrongbin16/lsp-progress.nvim'},
+
+            -- Floating file structure
+            {
+                "SmiteshP/nvim-navbuddy",
+                dependencies = {
+                    "neovim/nvim-lspconfig",
+                    "SmiteshP/nvim-navic",
+                    "MunifTanjim/nui.nvim"
+                }
+            },
+            -- Function signatures
+            {
+                "ray-x/lsp_signature.nvim"
+            },
+            -- Collection of snippets
+            'rafamadriz/friendly-snippets',
+            -- Nvim Lua API documentation
+            'folke/neodev.nvim',
+            -- gcc for commenting
+            'tpope/vim-commentary',
+
         },
         config = function ()
             require("plugins.lsp")
-        end
+        end,
+        event = 'VeryLazy'
     },
-
-    -- Function signatures
-    {
-        lazy = true,
-        "ray-x/lsp_signature.nvim"
-    },
-
-    -- Floating file structure
-    {
-        lazy = true,
-        "SmiteshP/nvim-navbuddy",
-        dependencies = {
-            "neovim/nvim-lspconfig",
-            "SmiteshP/nvim-navic",
-            "MunifTanjim/nui.nvim"
-        }
-    },
-
-    -- Collection of snippets
-    'rafamadriz/friendly-snippets',
 
     -- Which key
     {
@@ -174,59 +177,65 @@ Plugins = {
 
 
     -- Sneak for quick navigation with s
-    'justinmk/vim-sneak',
+    {
+        lazy = true,
+        'justinmk/vim-sneak',
+        event = 'BufRead',
+    },
 
     -- Identation guidelines
-    "lukas-reineke/indent-blankline.nvim",
+    {
+        lazy = true,
+        "lukas-reineke/indent-blankline.nvim",
+        event = 'BufRead',
+    },
 
     -- Autopairs
     {
         "windwp/nvim-autopairs",
         config = function()
             require("plugins.autopairs")
-        end
+        end,
+        event = 'BufRead'
     },
 
     -- Vinegar for improved netrw
     'tpope/vim-vinegar',
 
-    -- Nvim Lua API documentation
-    'folke/neodev.nvim',
-
-    -- gcc for commenting
-    'tpope/vim-commentary',
-
-    -- For smarter commenting
-
     -- Todo comments
     {
+        lazy = true,
         "folke/todo-comments.nvim",
         dependencies = {
             "nvim-lua/plenary.nvim",
         },
         config = function ()
             require("plugins.todo")
-        end
+        end,
+        event = 'BufRead'
     },
 
     -- Illuminate the word under the curser and its references
     {
+        lazy = true,
         'RRethy/vim-illuminate',
         config = function()
             require("plugins.illuminate")
-        end
+        end,
+        event = 'BufRead'
     },
 
     -- Surround feature
     {
+        lazy = true,
         "kylechui/nvim-surround",
         version = "*", -- Use for stability; omit to use `main` branch for the latest features
-        event = "VeryLazy",
         config = function()
             require("nvim-surround").setup({
                 -- Configuration here, or leave empty to use defaults
             })
-        end
+        end,
+        event = 'BufRead',
     },
 
     -- Seamless navigation between vim and tmux panes
