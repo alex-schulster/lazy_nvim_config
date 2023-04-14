@@ -100,6 +100,7 @@ Plugins = {
 
     -- Floating file structure
     {
+        lazy = true,
         "SmiteshP/nvim-navbuddy",
         dependencies = {
             "neovim/nvim-lspconfig",
