@@ -5,7 +5,7 @@
 --]]
 
 -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
-require("neodev_conf").setup()
+require("plugins.neodev_conf").setup()
 
 -- Start LSP
 local lsp = require('lsp-zero')
@@ -14,7 +14,7 @@ local lsp = require('lsp-zero')
 lsp.preset("recommended")
 
 -- Set up auto completion plugin
-local cmp = require("cmp_conf")
+local cmp = require("plugins.cmp_conf")
 
 -- Setup CMP
 cmp.setup()

@@ -4,10 +4,10 @@
 ################################################################################
 --]]
 
-local neodev = {}
+local M = {}
 
 -- Create setup function
-function neodev.setup()
+function M.setup()
     require("neodev").setup({
         library = {
             enabled = true, -- when not enabled, neodev will not change any settings to the LSP server
@@ -29,4 +29,4 @@ function neodev.setup()
     })
 end
 
-return neodev
+return M

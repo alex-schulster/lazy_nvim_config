@@ -60,7 +60,14 @@ Plugins = {
         end,
         config = function ()
             require("plugins.treesitter")
-        end
+        end,
+        dependencies = {
+            'JoosepAlviste/nvim-ts-context-commentstring',
+            config = function()
+                require("plugins.commentstring")
+            end
+        },
+
     },
 
     -- Harpoon
@@ -102,7 +109,10 @@ Plugins = {
 
             -- Lsp progress in status bar
             {'linrongbin16/lsp-progress.nvim'},
-        }
+        },
+        config = function ()
+            require("plugins.lsp")
+        end
     },
 
     -- Function signatures
@@ -137,10 +147,20 @@ Plugins = {
     },
 
     -- Startup screen
-    'goolord/alpha-nvim',
+    {
+        'goolord/alpha-nvim',
+        config = function ()
+            require("plugins.alpha")
+        end
+    },
 
     -- Lualine for status bar
-    'nvim-lualine/lualine.nvim',
+    {
+        'nvim-lualine/lualine.nvim',
+        config = function()
+            require("plugins.lualine")
+        end
+    },
 
     -- LSP loading progress bar
     {
@@ -160,7 +180,12 @@ Plugins = {
     "lukas-reineke/indent-blankline.nvim",
 
     -- Autopairs
-    "windwp/nvim-autopairs",
+    {
+        "windwp/nvim-autopairs",
+        config = function()
+            require("plugins.autopairs")
+        end
+    },
 
     -- Vinegar for improved netrw
     'tpope/vim-vinegar',
@@ -172,7 +197,6 @@ Plugins = {
     'tpope/vim-commentary',
 
     -- For smarter commenting
-    'JoosepAlviste/nvim-ts-context-commentstring',
 
     -- Todo comments
     {
@@ -180,10 +204,18 @@ Plugins = {
         dependencies = {
             "nvim-lua/plenary.nvim",
         },
+        config = function ()
+            require("plugins.todo")
+        end
     },
 
     -- Illuminate the word under the curser and its references
-    'RRethy/vim-illuminate',
+    {
+        'RRethy/vim-illuminate',
+        config = function()
+            require("plugins.illuminate")
+        end
+    },
 
     -- Surround feature
     {
@@ -220,8 +252,10 @@ Plugins = {
 
     -- Markdown preview plugin
     {
+        lazy = true,
         "iamcco/markdown-preview.nvim",
         build = function() vim.fn["mkdp#util#install"]() end,
+        ft = "md",
     },
 }
 

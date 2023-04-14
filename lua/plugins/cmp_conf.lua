@@ -11,7 +11,7 @@ function cmp.setup()
     require('cmp').setup({
         snippet = {
             expand = function(args)
-                require("luasnip").lsp_expand(args.body)
+                require("plugins.luasnip").lsp_expand(args.body)
             end
         },
         sources = {
