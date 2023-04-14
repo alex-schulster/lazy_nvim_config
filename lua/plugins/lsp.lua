@@ -39,9 +39,7 @@ lsp.set_preferences({
 
 -- Set keymaps
 require("which-key").register({
-    ["<leader>l"] = {name = "力LSP"},
     ["<leader>lm"] = {vim.cmd.Mason, " Mason"},
-    ["<leader>ll"] = {"<cmd>Lazy<cr>", "鈴Lazy menu"},
 })
 
 -- Define function that will be executed when attaching an LSP to a buffer

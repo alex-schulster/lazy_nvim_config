@@ -81,5 +81,9 @@ require("which-key").register({
 
     -- Lazygit
     ["<leader>g"] = {vim.cmd.LazyGit, " LazyGit"},
+
+    -- LSP basics
+    ["<leader>l"] = {name = "力LSP"},
+    ["<leader>ll"] = {"<cmd>Lazy<cr>", "鈴Lazy menu"},
 })
 
