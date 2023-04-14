@@ -51,6 +51,9 @@ lsp.on_attach(function(client, bufnr)
     -- Attach breadcrumbs
     require("nvim-navbuddy").attach(client, bufnr)
 
+    -- Load function signature
+    require("plugins.signature")
+
     -- Set remaps
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "gh", function() vim.lsp.buf.hover() end, opts)

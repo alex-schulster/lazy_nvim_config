@@ -96,7 +96,10 @@ Plugins = {
     },
 
     -- Function signatures
-    "ray-x/lsp_signature.nvim",
+    {
+        lazy = true,
+        "ray-x/lsp_signature.nvim"
+    },
 
     -- Floating file structure
     {
