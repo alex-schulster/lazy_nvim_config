@@ -7,7 +7,7 @@
 -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
 require("plugins.neodev_conf").setup()
 
--- Start LSP
+-- Load LSP
 local lsp = require('lsp-zero')
 
 -- Load recommended presets

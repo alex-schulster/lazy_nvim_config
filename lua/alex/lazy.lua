@@ -85,9 +85,6 @@ Plugins = {
         lazy = true,
         'kdheepak/lazygit.nvim',
         cmd = "LazyGit",
-        config = function ()
-            require("plugins.lazygit")
-        end
     },
 
     -- LSP

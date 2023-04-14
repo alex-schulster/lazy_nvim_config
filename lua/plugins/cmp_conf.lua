@@ -6,12 +6,21 @@
 
 local M = {}
 
+-- Load luasnip and 
+require("luasnip.loaders.from_vscode").load(
+{
+    paths = {
+        "../../snippets/"
+    }
+}
+)
+
 -- Setup CMP plugin
 function M.setup()
     require("cmp").setup({
         snippet = {
             expand = function(args)
-                require("plugins.luasnip").lsp_expand(args.body)
+                require("luasnip").lsp_expand(args.body)
             end
         },
         sources = {
