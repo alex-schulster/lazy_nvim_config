@@ -174,6 +174,7 @@ Plugins = {
     -- For smarter commenting
     'JoosepAlviste/nvim-ts-context-commentstring',
 
+    -- Todo comments
     {
         "folke/todo-comments.nvim",
         dependencies = {
@@ -197,14 +198,25 @@ Plugins = {
     },
 
     -- Seamless navigation between vim and tmux panes
-    'christoomey/vim-tmux-navigator',
+    {
+        lazy = true,
+        'christoomey/vim-tmux-navigator',
+        event = "VeryLazy",
+    },
 
     -- STM LSP local plugin
     -- {
     --     dir = "~/local/code/Lua/stm_lsp_nvim/",
     --     name = "stm_lsp_nvim"
     -- },
-    "alex-schulster/stm_lsp_nvim",
+    {
+        lazy = true,
+        "alex-schulster/stm_lsp_nvim",
+        ft = {"c", "h", "cpp", "hpp"},
+        config = function ()
+            require("plugins.stm_lsp_nvim")
+        end
+    },
 
     -- Markdown preview plugin
     {
