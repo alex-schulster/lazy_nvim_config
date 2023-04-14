@@ -109,7 +109,9 @@ Plugins = {
             {'L3MON4D3/LuaSnip'},           -- Required
 
             -- Lsp progress in status bar
-            {'linrongbin16/lsp-progress.nvim'},
+            {
+                'linrongbin16/lsp-progress.nvim',
+            },
 
             -- Floating file structure
             {
@@ -194,7 +196,7 @@ Plugins = {
     {
         "windwp/nvim-autopairs",
         config = function()
-            require("plugins.autopairs")
+            require("nvim-autopairs").setup()
         end,
         event = 'BufRead'
     },
