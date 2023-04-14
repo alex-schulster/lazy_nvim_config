@@ -164,10 +164,11 @@ Plugins = {
     'christoomey/vim-tmux-navigator',
 
     -- STM LSP local plugin
-    {
-        dir = "~/local/code/Lua/stm_lsp_nvim/",
-        name = "stm_lsp_nvim"
-    },
+    -- {
+    --     dir = "~/local/code/Lua/stm_lsp_nvim/",
+    --     name = "stm_lsp_nvim"
+    -- },
+    "alex-schulster/stm_lsp_nvim",
 
     -- Markdown preview plugin
     {
