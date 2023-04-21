@@ -23,3 +23,7 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
+-- leader y and p for clipboard yank / paste in visual mode
+vim.keymap.set("v", "<leader>y", [["+y]])
+vim.keymap.set("v", "<leader>p", [["+p]])
+vim.keymap.set("v", "<leader>d", [["_d]])
