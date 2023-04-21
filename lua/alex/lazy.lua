@@ -54,7 +54,7 @@ Plugins = {
         lazy = true,
         'nvim-treesitter/nvim-treesitter',
         cmd = {"TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo", "TSUpdate"},
-        event = "BufRead",
+        event = {"BufRead", "BufNewFile"},
         build = function()
             vim.cmd("autocmd FileType * TSUpdate")
         end,
@@ -179,14 +179,14 @@ Plugins = {
     {
         lazy = true,
         'justinmk/vim-sneak',
-        event = 'BufRead',
+        event = {"BufRead", "BufNewFile"},
     },
 
     -- Identation guidelines
     {
         lazy = true,
         "lukas-reineke/indent-blankline.nvim",
-        event = 'BufRead',
+        event = {"BufRead", "BufNewFile"},
     },
 
     -- Autopairs
@@ -195,7 +195,7 @@ Plugins = {
         config = function()
             require("nvim-autopairs").setup()
         end,
-        event = 'BufRead'
+        event = {"BufRead", "BufNewFile"},
     },
 
     -- Vinegar for improved netrw
@@ -211,7 +211,7 @@ Plugins = {
         config = function ()
             require("plugins.todo")
         end,
-        event = 'BufRead'
+        event = {"BufRead", "BufNewFile"},
     },
 
     -- Illuminate the word under the curser and its references
@@ -221,7 +221,7 @@ Plugins = {
         config = function()
             require("plugins.illuminate")
         end,
-        event = 'BufRead'
+        event = {"BufRead", "BufNewFile"},
     },
 
     -- Surround feature
@@ -234,7 +234,7 @@ Plugins = {
                 -- Configuration here, or leave empty to use defaults
             })
         end,
-        event = 'BufRead',
+        event = {"BufRead", "BufNewFile"},
     },
 
     -- Seamless navigation between vim and tmux panes
