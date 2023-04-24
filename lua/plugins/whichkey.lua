@@ -41,7 +41,7 @@ require("which-key").register({
     ["<leader>p"] = {[["+p]], "󰆒 Paste clipboard"},
     ["<leader>P"] = {[["_dP]], "屢Paste without yank"},
     ["<leader>y"] = {[["+y]], "󰆒 Yank in system clipboard"},
-    ["<leader>d"] = {[["_d]], " Delete in void register"},
+    ["<leader>D"] = {[["_d]], " Delete in void register"},
 
     -- Close current window
     ["<leader>c"] = {"<C-w>c", " Close current window"},
@@ -95,5 +95,8 @@ require("which-key").register({
     ["<leader>fb"] = {"<cmd>Telescope buffers<cr>", "﬘ Buffers"},
     ["<leader>fh"] = {"<cmd>Telescope current_buffer_fuzzy_find<cr>", "什Text in this buffer"},
 
+    -- Debugging
+    ["<leader>d"] = {name = " Debug"},
+    ["<leader>db"] = {"<cmd>lua require('dap').toggle_breakpoint()<cr>", " Toggle breakpoint"},
 })
 

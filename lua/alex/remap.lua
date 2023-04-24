@@ -26,4 +26,10 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 -- leader y and p for clipboard yank / paste in visual mode
 vim.keymap.set("v", "<leader>y", [["+y]])
 vim.keymap.set("v", "<leader>p", [["+p]])
-vim.keymap.set("v", "<leader>d", [["_d]])
+vim.keymap.set("v", "<leader>D", [["_d]])
+
+-- Debugging
+vim.keymap.set("n", "<C-P>", "<cmd>lua require'dap'.continue()<cr>")
+vim.keymap.set("n", "<C-O>", "<cmd>lua require'dap'.step_over()<cr>")
+vim.keymap.set("n", "<C-I>", "<cmd>lua require'dap'.step_into()<cr>")
+

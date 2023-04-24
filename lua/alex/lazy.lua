@@ -268,6 +268,14 @@ Plugins = {
         build = function() vim.fn["mkdp#util#install"]() end,
         ft = "md",
     },
+
+    -- Debugging
+    {
+        "mfussenegger/nvim-dap",
+        config = function ()
+            require("plugins.dap")
+        end,
+    }
 }
 
 -- Call lazy
