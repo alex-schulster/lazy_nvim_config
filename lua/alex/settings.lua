@@ -14,6 +14,12 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+-- Set format options to disable auto comment on new lines
+vim.api.nvim_create_autocmd(
+    {'BufRead', 'BufNewFile'},
+    {command = "set formatoptions-=cro"}
+)
+
 -- Enable smart indent
 vim.opt.smartindent = true
 

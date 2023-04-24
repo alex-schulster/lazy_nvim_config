@@ -31,7 +31,7 @@ Plugins = {
         config = function()
             require("tokyonight").setup({
                 style = "moon",	-- Set style among the 4 available
-                -- transparent = true,	-- Set transparent background
+                transparent = true,	-- Set transparent background
             })
             -- Apply Tokyonight color scheme
             vim.cmd[[colorscheme tokyonight]]
@@ -198,7 +198,7 @@ Plugins = {
         config = function()
             require("nvim-autopairs").setup()
         end,
-        event = {"BufRead", "BufNewFile"}
+        event = {"BufRead", "BufNewFile"},
     },
 
     -- Vinegar for improved netrw
@@ -214,7 +214,7 @@ Plugins = {
         config = function ()
             require("plugins.todo")
         end,
-        event = {"BufRead", "BufNewFile"}
+        event = {"BufRead", "BufNewFile"},
     },
 
     -- Illuminate the word under the curser and its references
@@ -224,7 +224,7 @@ Plugins = {
         config = function()
             require("plugins.illuminate")
         end,
-        event = {"BufRead", "BufNewFile"}
+        event = {"BufRead", "BufNewFile"},
     },
 
     -- Surround feature

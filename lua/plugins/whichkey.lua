@@ -38,8 +38,9 @@ require("which-key").setup({
 -- Set keymaps
 require("which-key").register({
     -- Quick actions
-    ["<leader>p"] = {[["_dP]], "屢Paste without yank"},
-    ["<leader>y"] = {[["+y]], " Yank in system clipboard"},
+    ["<leader>p"] = {[["+p]], "󰆒 Paste clipboard"},
+    ["<leader>P"] = {[["_dP]], "屢Paste without yank"},
+    ["<leader>y"] = {[["+y]], "󰆒 Yank in system clipboard"},
     ["<leader>d"] = {[["_d]], " Delete in void register"},
 
     -- Close current window
