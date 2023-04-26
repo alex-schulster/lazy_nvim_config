@@ -98,5 +98,6 @@ require("which-key").register({
     -- Debugging
     ["<leader>d"] = {name = " Debug"},
     ["<leader>db"] = {"<cmd>lua require('dap').toggle_breakpoint()<cr>", " Toggle breakpoint"},
+    ["<leader>du"] = {"<cmd>lua require('dapui').toggle()<cr>", "󰓠 Toggle UI"},
 })
 

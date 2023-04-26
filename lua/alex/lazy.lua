@@ -275,6 +275,9 @@ Plugins = {
         config = function ()
             require("plugins.dap")
         end,
+        dependencies = {
+            "rcarriga/nvim-dap-ui",
+        }
     }
 }
 
