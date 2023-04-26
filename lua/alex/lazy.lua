@@ -95,7 +95,13 @@ Plugins = {
         dependencies = {
             -- LSP Support
             {'neovim/nvim-lspconfig'},             -- Required
-            { 'williamboman/mason.nvim', build = vim.cmd.MasonUpdate },
+            {
+                'williamboman/mason.nvim',
+                build = vim.cmd.MasonUpdate,
+                config = function ()
+                    require("mason").setup()
+                end,
+            },
             {'williamboman/mason-lspconfig.nvim'},
 
             -- Autocompletion
