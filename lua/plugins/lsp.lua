@@ -49,8 +49,8 @@ lsp.on_attach(function(client, bufnr)
     -- Attach breadcrumbs
     require("nvim-navbuddy").attach(client, bufnr)
 
-    -- Load function signature
-    require("plugins.signature")
+    -- Attach lsp signature
+    require("lsp_signature").on_attach(nil, bufnr)
 
     -- Set remaps
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -66,6 +66,9 @@ lsp.on_attach(function(client, bufnr)
         ["<leader>lb"] = {"<cmd>Navbuddy<cr>", "פּ Nav Buddy"},
     })
 end)
+
+-- Setup signature plugin
+require("plugins.signature")
 
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
