@@ -41,7 +41,7 @@ require("which-key").register({
     ["<leader>p"] = {[["+p]], "󰆒 Paste clipboard"},
     ["<leader>P"] = {[["_dP]], "屢Paste without yank"},
     ["<leader>y"] = {[["+y]], "󰆒 Yank in system clipboard"},
-    ["<leader>d"] = {[["_d]], " Delete in void register"},
+    ["<leader>D"] = {[["_d]], " Delete in void register"},
 
     -- Close current window
     ["<leader>c"] = {"<C-w>c", " Close current window"},
@@ -86,5 +86,18 @@ require("which-key").register({
     -- LSP basics
     ["<leader>l"] = {name = "力LSP"},
     ["<leader>ll"] = {"<cmd>Lazy<cr>", "鈴Lazy menu"},
+
+    -- Telescope
+    ["<leader>f"] = {name = " Find"},
+    ["<leader>ff"] = {"<cmd>Telescope find_files<cr>", " File"},
+    ["<leader>ft"] = {"<cmd>Telescope live_grep<cr>", " Text in workspace"},
+    ["<leader>fw"] = {"<cmd>Telescope grep_string<cr>", "󰟵 Selection / Word under cursor"},
+    ["<leader>fb"] = {"<cmd>Telescope buffers<cr>", "﬘ Buffers"},
+    ["<leader>fh"] = {"<cmd>Telescope current_buffer_fuzzy_find<cr>", "什Text in this buffer"},
+
+    -- Debugging
+    ["<leader>d"] = {name = " Debug"},
+    ["<leader>db"] = {"<cmd>lua require('dap').toggle_breakpoint()<cr>", " Toggle breakpoint"},
+    ["<leader>du"] = {"<cmd>lua require('dapui').toggle()<cr>", "󰓠 Toggle UI"},
 })
 

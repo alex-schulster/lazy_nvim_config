@@ -95,7 +95,13 @@ Plugins = {
         dependencies = {
             -- LSP Support
             {'neovim/nvim-lspconfig'},             -- Required
-            { 'williamboman/mason.nvim', build = vim.cmd.MasonUpdate },
+            {
+                'williamboman/mason.nvim',
+                build = vim.cmd.MasonUpdate,
+                config = function ()
+                    require("mason").setup()
+                end,
+            },
             {'williamboman/mason-lspconfig.nvim'},
 
             -- Autocompletion
@@ -103,7 +109,10 @@ Plugins = {
             {'hrsh7th/cmp-nvim-lsp'},       -- Required
             {'hrsh7th/cmp-path'},           -- Required
             {'saadparwaiz1/cmp_luasnip'},   -- Required
-            {'L3MON4D3/LuaSnip'},           -- Required
+            {
+                'L3MON4D3/LuaSnip',
+                build = "make install_jsregexp",
+            },
 
             -- Lsp progress in status bar
             {
@@ -265,6 +274,17 @@ Plugins = {
         build = function() vim.fn["mkdp#util#install"]() end,
         ft = "md",
     },
+
+    -- Debugging
+    {
+        "mfussenegger/nvim-dap",
+        config = function ()
+            require("plugins.dap")
+        end,
+        dependencies = {
+            "rcarriga/nvim-dap-ui",
+        }
+    }
 }
 
 -- Call lazy
