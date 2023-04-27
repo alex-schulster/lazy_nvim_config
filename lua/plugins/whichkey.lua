@@ -97,7 +97,12 @@ require("which-key").register({
 
     -- Debugging
     ["<leader>d"] = {name = " Debug"},
-    ["<leader>db"] = {"<cmd>lua require('dap').toggle_breakpoint()<cr>", " Toggle breakpoint"},
+    ["<leader>dd"] = {"<cmd>lua require('dap').toggle_breakpoint()<cr>", " Toggle breakpoint"},
     ["<leader>du"] = {"<cmd>lua require('dapui').toggle()<cr>", "󰓠 Toggle UI"},
+    ["<leader>d;"] = {"<cmd>lua require('dap').continue()<cr>", " Play debug"},
+    ["<leader>dn"] = {"<cmd>lua require('dap').step_over()<cr>", " Step over"},
+    ["<leader>db"] = {"<cmd>lua require('dap').step_back()<cr>", " Step back"},
+    ["<leader>di"] = {"<cmd>lua require('dap').step_into()<cr>", " Step into"},
+    ["<leader>do"] = {"<cmd>lua require('dap').step_out()<cr>", " Step out"},
 })
 
