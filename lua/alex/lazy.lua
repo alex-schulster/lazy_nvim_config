@@ -32,6 +32,9 @@ Plugins = {
             require("tokyonight").setup({
                 style = "moon",	-- Set style among the 4 available
                 transparent = true,	-- Set transparent background
+                on_colors = function (colors)
+                    colors.border = "#23273b"
+                end
             })
             -- Apply Tokyonight color scheme
             vim.cmd[[colorscheme tokyonight]]

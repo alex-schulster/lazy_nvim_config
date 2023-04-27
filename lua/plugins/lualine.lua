@@ -4,24 +4,17 @@
 ################################################################################
 --]]
 
+local custom_theme = require("lualine.themes.tokyonight")
+custom_theme.normal.c.bg = "#23273b"
+custom_theme.inactive.c.bg = "#23273b"
+custom_theme.inactive.c.fg = "#565f89"
+
+-- Setup plugin
 require("lualine").setup({
     options = {
-        icons_enabled = true,
-        theme = 'auto',
+        theme = custom_theme,
         component_separators = { left = '|', right = '|'},
         section_separators = { left = ' ', right = ' '},
-        disabled_filetypes = {
-            statusline = {},
-            winbar = {},
-        },
-        ignore_focus = {},
-        always_divide_middle = true,
-        globalstatus = false,
-        refresh = {
-            statusline = 1000,
-            tabline = 1000,
-            winbar = 1000,
-        }
     },
     sections = {
         lualine_a = {'mode'},
@@ -39,8 +32,4 @@ require("lualine").setup({
         lualine_y = {},
         lualine_z = {}
     },
-    tabline = {},
-    winbar = {},
-    inactive_winbar = {},
-    extensions = {}
 })

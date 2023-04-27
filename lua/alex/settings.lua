@@ -59,3 +59,4 @@ vim.g.netrw_winsize = '30'
 
 -- Disable nvim modelines
 vim.opt.modeline = false
+
