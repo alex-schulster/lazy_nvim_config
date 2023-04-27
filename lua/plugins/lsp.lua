@@ -70,6 +70,9 @@ end)
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
+-- Set border for lsp window
+require('lspconfig.ui.windows').default_options.border = 'single'
+
 -- Finally, load lsp
 lsp.setup()
 

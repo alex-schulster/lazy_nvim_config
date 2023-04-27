@@ -99,7 +99,11 @@ Plugins = {
                 'williamboman/mason.nvim',
                 build = vim.cmd.MasonUpdate,
                 config = function ()
-                    require("mason").setup()
+                    require("mason").setup({
+                        ui = {
+                            border = "single"
+                        }
+                    })
                 end,
             },
             {'williamboman/mason-lspconfig.nvim'},
@@ -284,9 +288,18 @@ Plugins = {
         dependencies = {
             "rcarriga/nvim-dap-ui",
         }
-    }
+    },
 }
 
+-- [[ ################### LAZY CONFIGURATION HERE #################### ]] --
+Options = {
+    -- UI setup
+    ui = {
+        border = 'single'
+    },
+}
+
+
 -- Call lazy
-require("lazy").setup(Plugins)
+require("lazy").setup(Plugins, Options)
 
