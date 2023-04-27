@@ -33,7 +33,7 @@ Plugins = {
                 style = "moon",	-- Set style among the 4 available
                 transparent = true,	-- Set transparent background
                 on_colors = function (colors)
-                    colors.border = "#23273b"
+                    colors.border = colors.fg_gutter
                 end
             })
             -- Apply Tokyonight color scheme
