@@ -8,10 +8,14 @@ local M = {}
 
 -- Load luasnip and 
 require("luasnip.loaders.from_vscode").load()
+local cmp = require("cmp")
 
 -- Setup CMP plugin
 function M.setup()
-    require("cmp").setup({
+    vim.o.completeopt = "menuone,noselect,preview"
+
+    cmp.setup({
+        preselect = cmp.PreselectMode.None,
         snippet = {
             expand = function(args)
                 require("luasnip").lsp_expand(args.body)
@@ -26,14 +30,14 @@ function M.setup()
     })
 end
 
-M.select = {behavior = require("cmp").SelectBehavior.Select}
+M.select = {behavior = cmp.SelectBehavior.Select}
 
 -- Set mappings
 M.mappings = require("lsp-zero").defaults.cmp_mappings({
-    ["<Tab>"] = require("cmp").mapping.select_next_item(M.select),
-    ["<S-Tab>"] = require("cmp").mapping.select_prev_item(M.select),
-    ["<CR>"] = require("cmp").mapping.confirm({ select = true }),
-    ["<C-Space>"] = require("cmp").mapping.complete(),
+    ["<Tab>"] = cmp.mapping.select_next_item(M.select),
+    ["<S-Tab>"] = cmp.mapping.select_prev_item(M.select),
+    ["<CR>"] = cmp.mapping.confirm({ select = false }),
+    ["<C-Space>"] = cmp.mapping.complete(),
 })
 
 

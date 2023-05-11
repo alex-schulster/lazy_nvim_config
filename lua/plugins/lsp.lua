@@ -71,7 +71,11 @@ end)
 require("plugins.signature")
 
 -- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
+-- Configure clangd to disable function arguments placeholders
+require("lspconfig").clangd.setup({
+    cmd = {'clangd', '--function-arg-placeholders=0'}
+})
 
 -- Set border for lsp window
 require('lspconfig.ui.windows').default_options.border = 'single'
