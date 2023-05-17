@@ -49,8 +49,8 @@ vim.opt.isfname:append("@-@")
 -- Update time in ms
 vim.opt.updatetime = 50
 
--- Set vertical ruler at column 85 to avoid too long lines
-vim.opt.colorcolumn = "85"
+-- Set vertical ruler at column 80 to avoid too long lines
+vim.opt.colorcolumn = "80"
 
 -- netrw settings
 vim.g.netrw_banner = 1
