@@ -104,5 +104,9 @@ require("which-key").register({
     ["<leader>db"] = {"<cmd>lua require('dap').step_back()<cr>", " Step back"},
     ["<leader>di"] = {"<cmd>lua require('dap').step_into()<cr>", " Step into"},
     ["<leader>do"] = {"<cmd>lua require('dap').step_out()<cr>", " Step out"},
+    ["<leader>dr"] = {"<cmd>lua require('dap').restart()<cr>", " Restart"},
+    ["<leader>dq"] = {
+        "<cmd>lua require('dap').terminate()<cr><cmd>lua require('dapui').close()<cr>",
+        " Terminate"},
 })
 
