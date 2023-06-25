@@ -50,7 +50,7 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 -- Set vertical ruler at column 85 to avoid too long lines
-vim.opt.colorcolumn = "85"
+vim.opt.colorcolumn = "80"
 
 -- netrw settings
 vim.g.netrw_banner = 1
@@ -59,4 +59,32 @@ vim.g.netrw_winsize = '30'
 
 -- Disable nvim modelines
 vim.opt.modeline = false
+
+-- Enable buffer-specific textwidth settings for .tex and .md files
+vim.cmd([[
+  augroup FileTypeConfig
+    autocmd!
+    autocmd FileType tex,md lua Set_textwidth()
+  augroup END
+]])
+
+-- Autocommand to write server address on latex open file
+vim.cmd([[
+  augroup vimtex_common
+    autocmd!
+    autocmd FileType tex lua Write_server_name()
+  augroup END
+]])
+
+-- Function to set textwidth to 80
+function Set_textwidth()
+  local bufnr = vim.api.nvim_get_current_buf()
+  vim.api.nvim_buf_set_option(bufnr, 'textwidth', 80)
+end
+
+-- Function to write server address to temporary file
+function Write_server_name()
+  local nvim_server_file = '/tmp/vimtexserver.txt'
+  vim.fn.writefile({vim.v.servername}, nvim_server_file)
+end
 

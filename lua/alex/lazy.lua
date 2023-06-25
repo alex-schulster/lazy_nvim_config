@@ -136,9 +136,7 @@ Plugins = {
                 }
             },
             -- Function signatures
-            {
-                "ray-x/lsp_signature.nvim"
-            },
+            "ray-x/lsp_signature.nvim",
             -- Collection of snippets
             'rafamadriz/friendly-snippets',
             -- Nvim Lua API documentation
@@ -292,6 +290,15 @@ Plugins = {
             "rcarriga/nvim-dap-ui",
         }
     },
+
+    -- Latex
+    {
+        lazy = false,
+        "lervag/vimtex",
+        config = function ()
+            require("plugins.tex")
+        end,
+    }
 }
 
 -- [[ ################### LAZY CONFIGURATION HERE #################### ]] --
