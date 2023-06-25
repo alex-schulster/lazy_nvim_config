@@ -47,7 +47,9 @@ lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
 
     -- Attach breadcrumbs
-    require("nvim-navbuddy").attach(client, bufnr)
+    if client["name"] ~= 'ltex' then
+        require("nvim-navbuddy").attach(client, bufnr)
+    end
 
     -- Attach lsp signature
     require("lsp_signature").on_attach(nil, bufnr)
