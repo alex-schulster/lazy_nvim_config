@@ -56,6 +56,7 @@ vim.opt.colorcolumn = "80"
 vim.g.netrw_banner = 1
 vim.g.netrw_liststyle = 3
 vim.g.netrw_winsize = '30'
+vim.g.netrw_list_hide = '__pycache__'
 
 -- Disable nvim modelines
 vim.opt.modeline = false
