@@ -49,13 +49,14 @@ vim.opt.isfname:append("@-@")
 -- Update time in ms
 vim.opt.updatetime = 50
 
--- Set vertical ruler at column 85 to avoid too long lines
+-- Set vertical ruler at column 80 to avoid too long lines
 vim.opt.colorcolumn = "80"
 
 -- netrw settings
 vim.g.netrw_banner = 1
 vim.g.netrw_liststyle = 3
 vim.g.netrw_winsize = '30'
+vim.g.netrw_list_hide = '__pycache__'
 
 -- Disable nvim modelines
 vim.opt.modeline = false
