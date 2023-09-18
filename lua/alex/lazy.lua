@@ -277,7 +277,7 @@ Plugins = {
         lazy = true,
         "iamcco/markdown-preview.nvim",
         build = function() vim.fn["mkdp#util#install"]() end,
-        ft = "md",
+        event = "VeryLazy",
     },
 
     -- Debugging
@@ -298,6 +298,9 @@ Plugins = {
         config = function ()
             require("plugins.tex")
         end,
+        dependencies = {
+            "barreiroleo/ltex_extra.nvim"
+        }
     }
 }
 
