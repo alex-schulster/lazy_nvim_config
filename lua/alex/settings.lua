@@ -15,10 +15,10 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 -- Set format options to disable auto comment on new lines
--- vim.api.nvim_create_autocmd(
---     {'BufRead', 'BufNewFile'},
---     {command = "set formatoptions-=cro"}
--- )
+vim.api.nvim_create_autocmd(
+    {'BufRead', 'BufNewFile'},
+    {command = "set formatoptions-=cro"}
+)
 
 -- Enable smart indent
 vim.opt.smartindent = true
@@ -60,4 +60,32 @@ vim.g.netrw_list_hide = '__pycache__'
 
 -- Disable nvim modelines
 vim.opt.modeline = false
+
+-- Enable buffer-specific textwidth settings for .tex and .md files
+vim.cmd([[
+  augroup FileTypeConfig
+    autocmd!
+    autocmd FileType tex,md lua Set_textwidth()
+  augroup END
+]])
+
+-- Autocommand to write server address on latex open file
+vim.cmd([[
+  augroup vimtex_common
+    autocmd!
+    autocmd FileType tex lua Write_server_name()
+  augroup END
+]])
+
+-- Function to set textwidth to 80
+function Set_textwidth()
+  local bufnr = vim.api.nvim_get_current_buf()
+  vim.api.nvim_buf_set_option(bufnr, 'textwidth', 80)
+end
+
+-- Function to write server address to temporary file
+function Write_server_name()
+  local nvim_server_file = '/tmp/vimtexserver.txt'
+  vim.fn.writefile({vim.v.servername}, nvim_server_file)
+end
 

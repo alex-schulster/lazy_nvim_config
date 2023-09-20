@@ -47,7 +47,25 @@ lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
 
     -- Attach breadcrumbs
-    require("nvim-navbuddy").attach(client, bufnr)
+    if client["name"] ~= 'ltex' then
+        require("nvim-navbuddy").attach(client, bufnr)
+    else
+        require("ltex_extra").setup(
+        {
+            -- https://valentjn.github.io/ltex/supported-languages.html#natural-languages
+            load_langs = { "en-US", "fr"}, -- en-US as default
+
+            -- boolean : whether to load dictionaries on startup
+            init_check = true,
+
+            -- string : relative or absolute path to store dictionaries
+            path = ".ltex", -- project root or current working directory
+
+            -- string : "none", "trace", "debug", "info", "warn", "error", "fatal"
+            log_level = "none",
+        }
+        )
+    end
 
     -- Attach lsp signature
     require("lsp_signature").on_attach(nil, bufnr)

@@ -8,6 +8,7 @@ local M = {}
 
 -- Load luasnip and 
 require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip.loaders.from_lua").lazy_load({path = "~/.config/nvim/LuaSnip/"})
 local cmp = require("cmp")
 
 -- Setup CMP plugin

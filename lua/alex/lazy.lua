@@ -136,9 +136,7 @@ Plugins = {
                 }
             },
             -- Function signatures
-            {
-                "ray-x/lsp_signature.nvim"
-            },
+            "ray-x/lsp_signature.nvim",
             -- Collection of snippets
             'rafamadriz/friendly-snippets',
             -- Nvim Lua API documentation
@@ -279,7 +277,7 @@ Plugins = {
         lazy = true,
         "iamcco/markdown-preview.nvim",
         build = function() vim.fn["mkdp#util#install"]() end,
-        ft = "md",
+        event = "VeryLazy",
     },
 
     -- Debugging
