@@ -54,7 +54,7 @@ vim.opt.colorcolumn = "80"
 
 -- netrw settings
 vim.g.netrw_banner = 1
-vim.g.netrw_liststyle = 3
+-- vim.g.netrw_liststyle = 3
 vim.g.netrw_winsize = '30'
 vim.g.netrw_list_hide = '__pycache__'
 
