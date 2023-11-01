@@ -58,6 +58,10 @@ vim.g.netrw_banner = 1
 vim.g.netrw_winsize = '30'
 vim.g.netrw_list_hide = '__pycache__'
 
+-- copilot settings
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap('i', "<C-j>", 'copilot#Accept("<CR>")', {silent = true, expr = true})
+
 -- Disable nvim modelines
 vim.opt.modeline = false
 

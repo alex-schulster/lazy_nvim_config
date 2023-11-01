@@ -314,6 +314,22 @@ Plugins = {
             require("plugins.jq")
         end,
     },
+
+    -- Vim session for TMUX resurrect
+    {
+        "tpope/vim-obsession"
+    },
+
+    -- Github copilot
+    {
+        lazy = true,
+        "github/copilot.vim",
+        config = function ()
+            -- Enbable copilot
+            vim.cmd("Copilot enable")
+        end,
+        event = "VeryLazy"
+    }
 }
 
 -- [[ ################### LAZY CONFIGURATION HERE #################### ]] --
