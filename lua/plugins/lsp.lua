@@ -92,7 +92,7 @@ require("plugins.signature")
 require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 -- Configure clangd to disable function arguments placeholders
 require("lspconfig").clangd.setup({
-    cmd = {'clangd', '--function-arg-placeholders=0'}
+    cmd = {'clangd', '--function-arg-placeholders=0', '--offset-encoding=utf-16'},
 })
 
 -- Set border for lsp window

@@ -108,5 +108,10 @@ require("which-key").register({
     ["<leader>dq"] = {
         "<cmd>lua require('dap').terminate()<cr><cmd>lua require('dapui').close()<cr>",
         " Terminate"},
+
+    -- Debugging
+    ["<leader>G"] = {name = " Copilot"},
+    ["<leader>Ge"] = {"<cmd>Copilot enable<cr>", " Enable Copilot"},
+    ["<leader>Gd"] = {"<cmd>Copilot disable<cr>", " Disable Copilot"},
 })
 
