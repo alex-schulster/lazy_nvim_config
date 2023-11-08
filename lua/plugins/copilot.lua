@@ -25,3 +25,4 @@ vim.api.nvim_create_user_command(
 
 -- Map <C-c> to the new command
 vim.api.nvim_set_keymap('n', '<C-c>', ':ToggleCopilot<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-c>', '<cmd>ToggleCopilot<CR>', { noremap = true, silent = true })
