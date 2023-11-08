@@ -148,7 +148,7 @@ Plugins = {
         config = function ()
             require("plugins.lsp")
         end,
-        event = 'VeryLazy'
+        event = "VeryLazy"
     },
 
     -- Which key
@@ -325,8 +325,7 @@ Plugins = {
         lazy = true,
         "github/copilot.vim",
         config = function ()
-            -- Enbable copilot
-            vim.cmd("Copilot enable")
+            require("plugins.copilot")
         end,
         event = "VeryLazy"
     }
