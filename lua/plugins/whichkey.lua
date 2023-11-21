@@ -113,5 +113,12 @@ require("which-key").register({
     ["<leader>G"] = {name = " Copilot"},
     ["<leader>Ge"] = {"<cmd>Copilot enable<cr>", " Enable Copilot"},
     ["<leader>Gd"] = {"<cmd>Copilot disable<cr>", " Disable Copilot"},
+
+    -- Tabs
+    ["<leader>t"] = {name= "󰓩 Tabs"},
+    ["<leader>tc"] = {"<cmd>tabnew<cr>", " New tab"},
+    ["<leader>tq"] = {"<cmd>tabclose<cr>", " Close tab"},
+    ["<leader>tn"] = {"<cmd>tabnext<cr>", " Next tab"},
+    ["<leader>tb"] = {"<cmd>tabprevious<cr>", " Previous tab"},
 })
 
