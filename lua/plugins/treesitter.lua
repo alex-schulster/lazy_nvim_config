@@ -26,3 +26,9 @@ require'nvim-treesitter.configs'.setup {
         additional_vim_regex_highlighting = false,
     },
 }
+
+-- Set up nvim-ts-context-commentstring separately
+require('ts_context_commentstring').setup{}
+
+-- Acknowledge the deprecation and speed up loading
+vim.g.skip_ts_context_commentstring_module = true
