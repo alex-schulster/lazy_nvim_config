@@ -11,6 +11,8 @@ local illuminate = require("illuminate")
 illuminate.configure({
     -- delay: delay in milliseconds
     delay = 0,
+    -- Add cutoff to 25 000 lines to ignore file that are longer
+    large_file_cutoff = 25000
 })
 
 -- Define remaps
