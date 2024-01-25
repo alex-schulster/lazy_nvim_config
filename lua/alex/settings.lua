@@ -20,6 +20,15 @@ vim.api.nvim_create_autocmd(
     {command = "set formatoptions-=cro"}
 )
 
+-- Automatically set file type for assembly files
+vim.api.nvim_create_autocmd(
+    {'BufRead', 'BufNewFile'},
+    {
+        pattern = {'*.s', '*.S'},
+        command = "set ft=asm68k"
+    }
+)
+
 -- Enable smart indent
 vim.opt.smartindent = true
 
