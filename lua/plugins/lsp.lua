@@ -94,6 +94,16 @@ require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 require("lspconfig").clangd.setup({
     cmd = {'clangd', '--function-arg-placeholders=0', '--offset-encoding=utf-16'},
 })
+-- Configure rust-analyzer to enable use all the features
+require("lspconfig").rust_analyzer.setup({
+    settings = {
+        ["rust-analyzer"] = {
+            cargo = {
+                allFeatures = true,
+            },
+        },
+    },
+})
 
 -- Set border for lsp window
 require('lspconfig.ui.windows').default_options.border = 'single'
