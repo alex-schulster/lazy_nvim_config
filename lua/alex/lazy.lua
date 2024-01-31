@@ -336,8 +336,21 @@ Plugins = {
         event = { "BufRead Cargo.toml" },
         tag = 'stable',
         config = function()
-            require('crates').setup()
+            require('crates').setup( {
+                null_ls = {
+                    enabled = true,
+                    name = "Crates",
+                },
+            })
         end,
+    },
+
+    -- none-ls
+    {
+        'nvimtools/none-ls.nvim',
+        config = function ()
+            require("plugins.none-ls")
+        end
     }
 }
 
