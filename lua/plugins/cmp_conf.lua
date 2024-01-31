@@ -26,6 +26,7 @@ function M.setup()
             { name = "nvim_lsp" },  -- LSP
             { name = "luasnip" },   -- Snippets
             { name = "path" },      -- Path
+            { name = "crates"},      -- Cargo.toml
             -- more sources
         },
     })

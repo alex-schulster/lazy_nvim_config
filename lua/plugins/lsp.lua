@@ -47,7 +47,8 @@ lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
 
     -- Attach breadcrumbs
-    if client["name"] ~= 'ltex' and client["name"] ~= 'copilot' then
+    if client["name"] ~= 'ltex' and client["name"] ~= 'copilot'
+        and client["name"] ~= 'null-ls' then
         require("nvim-navbuddy").attach(client, bufnr)
     elseif client["name"] == 'ltex' then
         require("ltex_extra").setup(

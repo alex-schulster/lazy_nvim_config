@@ -120,5 +120,11 @@ require("which-key").register({
     ["<leader>tq"] = {"<cmd>tabclose<cr>", " Close tab"},
     ["<leader>tn"] = {"<cmd>tabnext<cr>", " Next tab"},
     ["<leader>tb"] = {"<cmd>tabprevious<cr>", " Previous tab"},
+
+
+    -- Rust
+    ["<leader>r"] = {name = " Rust"},
+    ["<leader>ru"] = {"<cmd>lua require('crates').upgrade_crate()<cr>", " Upgrade crate"},
+    ["<leader>rU"] = {"<cmd>lua require('crates').upgrade_all_crates()<cr>", " Upgrade all crates"},
 })
 

@@ -328,6 +328,16 @@ Plugins = {
             require("plugins.copilot")
         end,
         event = "VeryLazy"
+    },
+
+    -- Rust Cargo.toml management
+    {
+        'saecki/crates.nvim',
+        event = { "BufRead Cargo.toml" },
+        tag = 'stable',
+        config = function()
+            require('crates').setup()
+        end,
     }
 }
 
