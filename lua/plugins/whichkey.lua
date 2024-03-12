@@ -126,5 +126,6 @@ require("which-key").register({
     ["<leader>r"] = {name = " Rust"},
     ["<leader>ru"] = {"<cmd>lua require('crates').upgrade_crate()<cr>", " Upgrade crate"},
     ["<leader>rU"] = {"<cmd>lua require('crates').upgrade_all_crates()<cr>", " Upgrade all crates"},
+    ["<leader>rf"] = {"<cmd>silent! !cargo fmt<cr>", "󰣟 Format file"},
 })
 
