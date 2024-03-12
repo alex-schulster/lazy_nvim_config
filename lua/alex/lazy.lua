@@ -351,6 +351,7 @@ Plugins = {
         config = function ()
             require("plugins.none-ls")
         end
+    },
 
     -- Whitespace
     {
