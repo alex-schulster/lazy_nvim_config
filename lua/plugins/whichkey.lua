@@ -39,12 +39,12 @@ require("which-key").setup({
 require("which-key").register({
     -- Quick actions
     ["<leader>p"] = {[["+p]], "󰆒 Paste clipboard"},
-    ["<leader>P"] = {[["_dP]], "屢Paste without yank"},
+    ["<leader>P"] = {[["_dP]], " Paste without yank"},
     ["<leader>y"] = {[["+y]], "󰆒 Yank in system clipboard"},
     ["<leader>D"] = {[["_d]], " Delete in void register"},
 
     -- Close current window
-    ["<leader>c"] = {"<C-w>c", " Close current window"},
+    ["<leader>c"] = {"<C-w>c", " Close current window"},
 
     -- Make current file executable
     ["<leader>x"] = {"<cmd>!chmod +x %<CR>", "󱨗 File chmod +x"},
@@ -57,10 +57,10 @@ require("which-key").register({
     ["<leader>n"] = {function ()
         vim.opt.nu = true
         vim.opt.relativenumber = true
-    end, " Set numbering"},
+    end, " Set numbering"},
 
     -- Open file explorer
-    ["<leader>e"] = {"<cmd>Ex<cr>", "פּ File explorer"},
+    ["<leader>e"] = {"<cmd>Ex<cr>", " File explorer"},
 
     -- Add shortcut for indenting the whole buffer in one go
     ["<leader>="] = {"ggVG=", "  Buffer indent"},
@@ -81,11 +81,11 @@ require("which-key").register({
     end, "󰻀 Alpha menu"},
 
     -- Lazygit
-    ["<leader>g"] = {vim.cmd.LazyGit, " LazyGit"},
+    ["<leader>g"] = {vim.cmd.LazyGit, " LazyGit"},
 
     -- LSP basics
-    ["<leader>l"] = {name = "力LSP"},
-    ["<leader>ll"] = {"<cmd>Lazy<cr>", "鈴Lazy menu"},
+    ["<leader>l"] = {name = "󰒋 LSP"},
+    ["<leader>ll"] = {"<cmd>Lazy<cr>", "󰍜 Lazy menu"},
 
     -- Telescope
     ["<leader>f"] = {name = " Find"},
@@ -93,7 +93,7 @@ require("which-key").register({
     ["<leader>ft"] = {"<cmd>Telescope live_grep<cr>", " Text in workspace"},
     ["<leader>fw"] = {"<cmd>Telescope grep_string<cr>", "󰟵 Selection / Word under cursor"},
     ["<leader>fb"] = {"<cmd>Telescope buffers<cr>", "﬘ Buffers"},
-    ["<leader>fh"] = {"<cmd>Telescope current_buffer_fuzzy_find<cr>", "什Text in this buffer"},
+    ["<leader>fh"] = {"<cmd>Telescope current_buffer_fuzzy_find<cr>", "󰓾 Text in this buffer"},
 
     -- Debugging
     ["<leader>d"] = {name = " Debug"},
@@ -117,7 +117,7 @@ require("which-key").register({
     -- Tabs
     ["<leader>t"] = {name= "󰓩 Tabs"},
     ["<leader>tc"] = {"<cmd>tabnew<cr>", " New tab"},
-    ["<leader>tq"] = {"<cmd>tabclose<cr>", " Close tab"},
+    ["<leader>tq"] = {"<cmd>tabclose<cr>", " Close tab"},
     ["<leader>tn"] = {"<cmd>tabnext<cr>", " Next tab"},
     ["<leader>tb"] = {"<cmd>tabprevious<cr>", " Previous tab"},
 

@@ -73,7 +73,7 @@ require("todo-comments").setup({
 -- Set keymaps
 require("which-key").register({
     -- Todos rempas
-    ["<leader>k"] = {name = "ﱔ Todo list"},
+    ["<leader>k"] = {name = " Todo list"},
     ["<leader>kn"] = {function() require("todo-comments").jump_next() end, "ﬃ  Next diagnostic"},
     ["<leader>kN"] = {function() require("todo-comments").jump_prev() end, "ﬂ  Previous diagnostic"},
     ["<leader>kf"] = {

@@ -44,12 +44,12 @@ dashboard.section.header.val = {
 
 -- Redefine available actions
 dashboard.section.buttons.val = {
-    dashboard.button( "e", "פּ  File explorer" , ":Ex<CR>"),
-    dashboard.button( "f", "  Find file" , "<cmd>Telescope find_files<cr>"),
-    dashboard.button( "t", "﬍  Find text" , "<cmd>Telescope live_grep<cr>"),
-    dashboard.button( "r", "  Recent files" , "<cmd>Telescope oldfiles<cr>"),
-    dashboard.button( "g", "  Lazy Git" , "<cmd>LazyGit<cr>"),
-    dashboard.button( "q", "  Quit NVIM" , ":qa<CR>"),
+    dashboard.button( "e", " File explorer" , ":Ex<CR>"),
+    dashboard.button( "f", " Find file" , "<cmd>Telescope find_files<cr>"),
+    dashboard.button( "t", "﬍ Find text" , "<cmd>Telescope live_grep<cr>"),
+    dashboard.button( "r", " Recent files" , "<cmd>Telescope oldfiles<cr>"),
+    dashboard.button( "g", " Lazy Git" , "<cmd>LazyGit<cr>"),
+    dashboard.button( "q", " Quit NVIM" , ":qa<CR>"),
 }
 
 -- Apply all settings
