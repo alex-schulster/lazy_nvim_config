@@ -34,7 +34,11 @@ Plugins = {
                 transparent = true,	-- Set transparent background
                 on_colors = function (colors)
                     colors.border = colors.fg_gutter
-                end
+                end,
+                styles = {
+                    comments = { italic = false },
+                    keywords = { italic = false }
+                }
             })
             -- Apply Tokyonight color scheme
             vim.cmd[[colorscheme tokyonight]]
